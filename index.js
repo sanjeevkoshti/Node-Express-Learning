@@ -9,18 +9,8 @@ app.listen(3000, () => {
 app.get("/", (req, res) => {
     res.send("Hello Sanjeev! this is root directory");
 });
-app.get("/sanju", (req, res) => {
-    res.send("Hello Sanju!");
-});
-app.get("/sanjeev", (req, res) => {
-    res.send("Hello Sanjeev!");
-});
-app.post("/", (req, res) => {
-    res.send("POST request received");
-});
-app.put("/", (req, res) => {
-    res.send("PUT request received");
-});
-app.delete("/", (req, res) => {
-    res.send("DELETE request received");
+app.get("/:username/:id", (req, res) => {
+    let { username, id } = req.params;
+    let htmlStr = `<h1>Hello ${username} and your id is ${id}</h1>`
+    res.send(htmlStr);
 });
