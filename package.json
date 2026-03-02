@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/sanjeevkoshti/Node-Express-Learning#readme",
   "dependencies": {
+    "ejs": "^4.0.1",
     "express": "^5.2.1"
   },
   "devDependencies": {
