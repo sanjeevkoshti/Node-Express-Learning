@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("home"); 
 });
 
 app.get("/rolldice", (req, res) => {
@@ -23,8 +23,9 @@ app.get("/ig/:username", (req, res) => {
     const data = instData[username];
     if(data){
         res.render("instagram", { data });
+    } else {
+        res.render("error");
     }
-    res.render("error");
 });
 
 app.listen(port, () => {
