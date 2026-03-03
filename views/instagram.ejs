@@ -6,15 +6,14 @@
     <title>Instagram</title>
 </head>
 <body>
-    <h2>This page belongs to @<%= username %></h2>
+    <h2>This page belongs to @<%= data.name %></h2>
+    <p>Followers : <%= data.followers %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Following : <%= data.following %> </p>
     <button>Follow</button>
     <button>message</button>
-
-    <h3>Accounts that follow you:</h3>
-    <ul>
-        <% for(let name of followers) { %>
-        <li><%= name %></li>
-        <% } %>
-    </ul>
+    <hr />
+    <% for(let post of data.posts) { %> 
+        <img src="<%= post.image %> " alt="some img" style="width: 10rem;" />
+        <p>Likes : <%= post.likes %> &nbsp; &nbsp; &nbsp; Comments : <%= post.comments %> </p>
+    <% } %> 
 </body>
 </html>
