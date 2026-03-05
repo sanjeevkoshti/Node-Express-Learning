@@ -21,7 +21,9 @@
   "homepage": "https://github.com/sanjeevkoshti/Node-Express-Learning#readme",
   "dependencies": {
     "ejs": "^4.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
